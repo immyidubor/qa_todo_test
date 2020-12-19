@@ -17,7 +17,7 @@ const driver: WebDriver = new Builder()
 // this is for the "What needs to be done?" input
 const todoInput: By = By.className("new-todo");
 // this locator will find ALL the todos
-const todos: By = By.css("li.todo'");
+const todos: By = By.css("li.todo");
 // this locator will find the text of a todo FROM the todo
 const todoLabel: By = By.css("label"); 
 // this locator will find the checkbox for the todo FROM the todo
