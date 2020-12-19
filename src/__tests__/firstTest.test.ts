@@ -19,11 +19,11 @@ const todoInput: By = By.className("new-todo");
 // this locator will find ALL the todos
 const todos: By = By.css("li.todo'");
 // this locator will find the text of a todo FROM the todo
-const todoLabel: By = By.css("label"); //By.css("li > label");
+const todoLabel: By = By.css("label"); 
 // this locator will find the checkbox for the todo FROM the todo
 const todoComplete: By = By.css("input");
 // this locator is for the "Clear complete" button in the corner
-const clearCompletedButton: By = By.css("button.clear-completed']");
+const clearCompletedButton: By = By.css("button.clear-completed");
 
 test("the todo app can add, complete, and clear a todo", async () => {
   // 1. Load the page
