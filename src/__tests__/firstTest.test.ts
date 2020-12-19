@@ -12,22 +12,18 @@ const driver: WebDriver = new Builder()
   .withCapabilities(Capabilities.chrome())
   .build();
 
-/*
-With our boilerplate out of the way, we can get to the test.
 
-You'll need to find the following 5 locators; the test will pass once they are added in.
-*/
 
 // this is for the "What needs to be done?" input
 const todoInput: By = By.className("new-todo");
 // this locator will find ALL the todos
-const todos: By = By.xpath("li");
+const todos: By = By.css("li.todo'");
 // this locator will find the text of a todo FROM the todo
-const todoLabel: By = By.xpath("//li[@class='todo']/div/text()"); //By.css("li > label");
+const todoLabel: By = By.css("label"); //By.css("li > label");
 // this locator will find the checkbox for the todo FROM the todo
-const todoComplete: By = By.css("input[type='checkbox']:checked");
+const todoComplete: By = By.css("input");
 // this locator is for the "Clear complete" button in the corner
-const clearCompletedButton: By = By.css("button[class='clear-completed']");
+const clearCompletedButton: By = By.css("button.clear-completed']");
 
 test("the todo app can add, complete, and clear a todo", async () => {
   // 1. Load the page
